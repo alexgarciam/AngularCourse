@@ -9,13 +9,24 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
+        this.message = "hola tio!!!!";
+        this.user = {
+            "id": 25,
+            "name": "alex",
+            "username": "agmarchena"
+        };
+        this.users = [
+            { "id": 25, "name": "alex", "username": "agmarchena" },
+            { "id": 26, "name": "paco", "username": "pacooo" },
+            { "id": 27, "name": "pepe", "username": "pepeee" }
+        ];
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n    <div class=\"jumbotron\">\n        <h1>Welcome to my App!!</h1>\n    </div>\n    "
+        template: "\n    \n    <header>\n        <nav class=\"navbar navbar-inverse\">\n            <div class=\"navbar-header\">\n             <a href=\"/\" class=\"navbar-brand\">My anguila app</a>\n            </div>\n        </nav>\n    </header>\n\n\n    <main>\n    \n    <div class=\"jumbotron\">\n        <h1>Welcome to my App!!</h1>\n        <p>{{message}}</p>\n    </div>\n\n    <p>The user is {{user.name}} ({{user.username}}) </p>\n\n    <div *ngIf=\"users\">\n    \n        <div *ngFor=\"let usuario of users\">\n            usuario {{usuario.id}} es {{usuario.name}} ({{usuario.username}})\n        </div>\n\n    </div>\n\n    </main>\n\n\n\n    <footer class=\"text-center\">\n        Copyright &copy; 2017\n    </footer>\n\n    "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
