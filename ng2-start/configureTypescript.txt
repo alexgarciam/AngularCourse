@@ -1,0 +1,5 @@
+#instalar typings
+npm install -g typings
+
+#instalar los recursos necesarios
+typings typings install dt~core-js dt~jasmine dt~node --save --global core-js
