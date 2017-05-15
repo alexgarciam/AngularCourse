@@ -14,21 +14,34 @@ import { Component } from '@angular/core';
 
 
     <main>
-    
-    <div class="jumbotron">
-        <h1>Welcome to my App!!</h1>
-        <p>{{message}}</p>
-    </div>
 
-    <p>The user is {{user.name}} ({{user.username}}) </p>
+    <div class="row">
+        <div class="col-sm-4">
+            <p>The user is {{user.name}} ({{user.username}}) </p>
 
-    <div *ngIf="users">
-    
-        <div *ngFor="let usuario of users">
-            usuario {{usuario.id}} es {{usuario.name}} ({{usuario.username}})
+            <div *ngIf="users">
+
+                <ul class="list-group users-list">
+                <li class="list-group-item" *ngFor="let usuario of users">
+                    usuario {{usuario.id}} es {{usuario.name}} ({{usuario.username}})
+                </li>
+                </ul>
+
+            </div>
+
         </div>
+        <div class="col-sm-8">
 
+            <div class="jumbotron">
+                <h1>Welcome to my App!!</h1>
+                <p>{{message}}</p>
+            </div>
+            
+        </div>
     </div>
+    
+
+    
 
     </main>
 

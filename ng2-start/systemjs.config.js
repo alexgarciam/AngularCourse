@@ -4,7 +4,7 @@
 (function(global) {
   // el map le dice a System dónde buscar las cosas que ha de cargar
   var map = {
-    'app':                        'app', // 'dist',
+    'app':                        'dist', // 'dist',
     '@angular':                   'node_modules/@angular',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     'rxjs':                       'node_modules/rxjs'
